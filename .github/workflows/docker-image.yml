@@ -1,0 +1,15 @@
+name: Docker Image CI
+
+on:
+  pull_request:
+    branches: ["master"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/chechout@v3
+    - name: Build Codespace docker image
+      run: docker build . --file .devcontainer/Dockerfile

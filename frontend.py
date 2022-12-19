@@ -1,11 +1,15 @@
+"""This is the main Frontend with login Ui"""
+
 from tkinter import Tk
 from components import Btn, TextField, TextType
 import main
 
 
 def start():
+  """Starts the ui"""
   def validateLogin():
-    if usernameVar.getText() == "Max" and passwordVar.getText() == "Max":
+    """Validates username and password"""
+    if username.textVar.get() == "Max" and password.textVar.get() == "Max":
       bgWindow.destroy()
       fgWindow.destroy()
 
@@ -26,14 +30,14 @@ def start():
   bgWindow.configure(background="darkgray")
 
   # Init Components
-  usernameVar = TextField(fgWindow, "Username", TextType.text)
-  passwordVar = TextField(fgWindow, "Password", TextType.password)
-  buttonVar = Btn(fgWindow, "Login", validateLogin)
+  username = TextField(fgWindow, "Username", TextType.NORMAL)
+  password = TextField(fgWindow, "Password", TextType.PASSWORD)
+  button = Btn(fgWindow, "Login", validateLogin)
 
   # Draw Components
-  usernameVar.draw()
-  passwordVar.draw()
-  buttonVar.draw()
+  username.draw()
+  password.draw()
+  button.draw()
 
   bgWindow.protocol("WM_DELETE_WINDOW", close)
   fgWindow.protocol("WM_DELETE_WINDOW", close)
