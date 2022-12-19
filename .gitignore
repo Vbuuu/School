@@ -1,0 +1,4 @@
+*.pyc
+__pycache__/
+.schoolvenv/Lib/site-packages/*
+.vscode/
