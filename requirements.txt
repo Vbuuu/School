@@ -1,7 +1,7 @@
 cffi==1.15.1
-cryptography==38.0.4
+cryptography==39.0.0
 deprecation==2.1.0
-packaging==22.0
+packaging==23.0
 pycparser==2.21
 pytray==0.3.4
 pyqt5-tools==5.15.4.3.2
